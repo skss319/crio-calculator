@@ -15,6 +15,11 @@ function App() {
 
   const handleEqual = () => {
     try {
+      if (expression.trim() === "") {
+        setResult("Error");
+        return;
+      }
+
       let evaluated = eval(expression);
 
       if (evaluated === Infinity) {
